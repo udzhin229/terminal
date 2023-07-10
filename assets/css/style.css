@@ -645,21 +645,24 @@ header nav .links button {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     opacity: 1;
+    visibility: visible;
     border: 10px solid #ffffff;
     filter: blur(15px);
     -webkit-filter: blur(15px);
-    animation: bloop 2s linear infinite;
-    -webkit-animation: bloop 2s ease-in-out infinite;
+    animation: bloop 3s linear infinite;
+    -webkit-animation: bloop 3s linear infinite;
 }
 @keyframes bloop {
     0% {
         width: 80%;
         height: 80%;
+        visibility: visible;
     }
     100% {
         width: 150%;
         height: 150%;
         opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -879,7 +882,7 @@ header nav .links button {
     position: relative;
 }
 .forwho__inner .block > div ul li::marker {
-    content: '\0020';
+    content: '';
     font-size: 2.2rem;
 }
 .forwho__inner .block > div ul li::before {
@@ -889,7 +892,7 @@ header nav .links button {
     height: 4px;
     width: 24px;
     left: -35px;
-    top: 18px;
+    top: 10px;
   }
 .forwho__inner .block > div ul li span {
     font-weight: 700;
@@ -2085,7 +2088,7 @@ footer {
         width: 16px;
         height: 3px;
         left: -25px;
-        top: 14px;
+        top: 8px;
     }
     .tape {
         flex-direction: column;
@@ -2115,10 +2118,10 @@ footer {
         margin: 20px 0;
     }
     .howdid__inner .pay > .title .line:first-child::before {
-        height: 206px;
+        height: 205px;
     }
     .howdid__inner .pay > .title .line:last-child::after {
-        height: 206px;
+        height: 205px;
     }
 
     .worked__inner {
@@ -2370,7 +2373,7 @@ footer {
         right: 0;
         bottom: 0;
         top: 0;
-        width: 65%;
+        width: 70%;
         z-index: 11;
         transform: translate(100%);
         -webkit-transform: translate(100%);
@@ -2418,7 +2421,7 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        width: 90%;
+        width: 96%;
         align-self: center;
     }
     #menu > nav > div:nth-child(3) > .links {
@@ -2621,10 +2624,10 @@ footer {
         height: 10px;
     }
     .howdid__inner .pay > .title .line:last-child::after {
-        height: 288px;
+        height: 287px;
     }
     .howdid__inner .pay > .title .line:first-child::before {
-        height: 288px;
+        height: 287px;
     }
     .worked__inner > p {
         padding: 10px 15px;
