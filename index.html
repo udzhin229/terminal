@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>KioskPAY</title>
+</head>
+<body>
+    <div id="main_modal">
+        <div id="modal" class="m">
+            <div class="modal">
+                <img class="cross1" src="/assets/images/cross1.svg" alt="">
+                <div class="title">Заповніть форму<br>і ми з Вами зв’яжемось!</div>
+                <form id="modal_form">
+                    <input type="text" name="name" id="name" required placeholder="Введіть Ваше ім’я">
+                    <input type="text" name="phone" id="phone" required placeholder="Введіть Ваш номер телефону">
+                    <button class="slide blind">Надіслати контактні дані</button>
+                </form>
+                <p>Натискаючи кнопку, ви даєте згоду на<br><a href="#">обробку своїх персональних даних</a></p>
+            </div>
+            
+        </div>
+        <div id="modal_thx" class="m">
+            <div class="modal">
+                 <img class="cross1" src="/assets/images/cross1.svg" alt="">
+                <div class="title">Дякуємо!</div>
+                <button id="send_ok" class="slide blind">Дані успішно надіслані</button>
+            </div>
+           
+        </div>
+    </div>
+
+    <div id="up">&uarr;</div>
+    <div id="menu" class="blind">
+        <nav>
+            <img id="cross" src="/assets/images/cross.svg" alt="">
+            <div><a href="/index.html#about" data-scroll="#about">Про компанію</a><a href="/index.html#terminals" data-scroll="#terminals">Продукт</a><a href="/index.html#perevag" data-scroll="#perevag">Переваги</a><a href="/index.html#quest" data-scroll="#quest">Питання</a></div>
+            <div>
+                <div class="links">
+                    <a href="#"><img src="/assets/images/viber.svg" alt="Viber KioskPAY"></a><a href="#"><img src="/assets/images/telegram.svg" alt="Telegram KioskPAY"></a>
+                </div>
+                <button class="modal_send">Замовити дзвінок</button>
+            </div>
+        </nav>
+    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="/assets/images/logo.svg" alt="Логотип KioskPAY" class="logo">
+                <div class="links">
+                    <a href="/index.html#about" data-scroll="#about">Про компанію</a><a href="/index.html#terminals" data-scroll="#terminals">Продукт</a><a href="/index.html#perevag" data-scroll="#perevag">Переваги</a><a href="/index.html#quest" data-scroll="#quest">Питання</a>
+                    <div class="net"><a href="#"><img src="/assets/images/viber.svg" alt="Viber KioskPAY"></a><a href="#"><img src="/assets/images/telegram.svg" alt="Telegram KioskPAY"></a></div>
+                    <div class="phones">
+                        <img src="/assets//images/phone.svg" alt="Телефон KioskPAY">
+                        <div>
+                            <a href="tel:+380980082788">+38(098)008-27-88</a>
+                            <a href="tel:+380502088885">+38(050)208-88-85</a>
+                        </div>
+                    </div>
+                    <button class="modal_send">Замовити дзвінок</button>
+                </div>
+                <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                    <circle cx="25" cy="25" r="25" fill="url(#paint0_linear_145_3568)"/>
+                    <path d="M13 17H38M13 24.5H38M13 32H38" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_145_3568" x1="50" y1="50" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+                        <stop offset="0.261695" stop-color="#3D87F5"/>
+                        <stop offset="1" stop-color="#9DC4FF"/>
+                      </linearGradient>
+                    </defs>
+                </svg>
+            </nav>
+        </div>
+    </header>
+    <section id="intro">
+        <svg class="line-pc anim_right" xmlns="http://www.w3.org/2000/svg" width="874" height="22" viewBox="0 0 874 22" fill="none">
+            <path d="M874 12.9619C875.105 12.9619 876 12.0665 876 10.9619C876 9.85734 875.105 8.96191 874 8.96191V12.9619ZM21.6667 10.9619C21.6667 5.07088 16.8911 0.295247 11 0.295247C5.10895 0.295247 0.333374 5.07088 0.333374 10.9619C0.333374 16.853 5.10895 21.6286 11 21.6286C16.8911 21.6286 21.6667 16.853 21.6667 10.9619ZM874 8.96191L11 8.96191V12.9619L874 12.9619V8.96191Z" fill="url(#paint0_radial_152_49)"/>
+            <defs>
+            <radialGradient id="paint0_radial_152_49" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.9998 10.962) scale(997.747 144012)">
+            <stop stop-color="white"/>
+            <stop offset="1" stop-color="white" stop-opacity="0"/>
+            </radialGradient>
+            </defs>
+        </svg>
+        <svg class="line-mob1 anim_down" xmlns="http://www.w3.org/2000/svg" width="12" height="222" viewBox="0 0 12 222" fill="none">
+            <path d="M7 1C7 0.447715 6.55228 -2.41411e-08 6 0C5.44772 2.41411e-08 5 0.447715 5 1L7 1ZM6.00001 210.667C3.05449 210.667 0.666676 213.054 0.666676 216C0.666676 218.946 3.05449 221.333 6.00001 221.333C8.94553 221.333 11.3333 218.946 11.3333 216C11.3333 213.054 8.94553 210.667 6.00001 210.667ZM5 1L5.00001 216L7.00001 216L7 1L5 1Z" fill="url(#paint0_radial_145_3581)"/>
+            <defs>
+              <radialGradient id="paint0_radial_145_3581" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6.00011 216) rotate(-90) scale(248.57 144012)">
+                <stop stop-color="white"/>
+                <stop offset="1" stop-color="white" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+        </svg>
+          <svg class="line-mob2 anim_up" xmlns="http://www.w3.org/2000/svg" width="12" height="267" viewBox="0 0 12 267" fill="none">
+            <path d="M5 266C5 266.552 5.44772 267 6 267C6.55228 267 7 266.552 7 266L5 266ZM6.00001 11.3333C8.94553 11.3333 11.3333 8.94553 11.3333 6C11.3333 3.05447 8.94553 0.666657 6.00001 0.666656C3.05449 0.666656 0.666678 3.05447 0.666678 6C0.666678 8.94553 3.05449 11.3333 6.00001 11.3333ZM7 266L7.00001 6L5.00001 6L5 266L7 266Z" fill="url(#paint0_radial_145_3582)"/>
+            <defs>
+              <radialGradient id="paint0_radial_145_3582" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(5.99991 5.99994) rotate(90) scale(300.596 144012)">
+                <stop stop-color="white"/>
+                <stop offset="1" stop-color="white" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+        </svg>
+        <div class="container">
+            <div class="intro__inner">
+                <div>
+                    <h1>Збережіть бізнес від штрафів, збитків та зайвих витрат</h1>
+                    <p><span>Електронний касир</span> – це простий і легальний спосіб уникнути установки РРО, внесення номенклатури товарів чи послуг, а також відсутність додаткових складнощів та звітів</p>
+                    <button class="slide modal_send">Замовити консультацію</button>
+                </div>
+                <div>
+                    <img src="/assets/images/intro-img.webp" alt="Термінал KioskPAY">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="second__inner">
+                <div class="block anim_left">
+                    <img src="/assets/images/second1.png" alt="">
+                    <div>
+                        <h6>Автоматизуйте</h6>
+                        <p>прийом платежів та позбудьтесь ризиків людського фактора при роботі з касою та грошовими коштами</p>
+                    </div>
+                </div>
+                <div class="block anim_right">
+                    <img src="/assets/images/second2.png" alt="">
+                    <div>
+                        <h6>Термінал здатний:</h6>
+                        <ul>
+                            <li>Приймати готівку</li>
+                            <li>Приймати банківські картки</li>
+                            <li>Фіскалізувати кожну транзакцію та видавати фіскальні чеки</li>
+                            <li>Інтегруватись у CRM-систему вашого підприємства</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block anim_left">
+                    <img src="/assets/images/second3.png" alt="">
+                    <div>
+                        <h6>Отримуйте</h6>
+                        <p>пасивний прибуток з комісії, приймаючи платежі з понад 5000 сервісів: ЖКХ, мобільний зв’язок, перекази на картки банків тощо</p>
+                    </div>
+                </div>
+                <div class="block anim_right">
+                    <img src="/assets/images/second4.png" alt="">
+                    <div>
+                        <h6>Прозорість</h6>
+                        <p>господарської діяльності та можливість підняти рівень обслуговування та довіри ваших клієнтів</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="problem">
+        <div class="container">
+            <div class="problem__inner">
+                <h2 class="anim_left">З якими <span>проблемами</span> ви можете зіштовхнутись, використовуючи РРО/ ПРРО:</h2>
+                <div class="problems">
+                    <div class="block anim_up">
+                        <div class="img"><img src="/assets/images/problem1.svg" alt=""></div>
+                        <div>
+                            <h6>Людський фактор при роботі з касою</h6>
+                            <p>Помилки касира можуть призвести до штрафів про які ви дізнаєтеся тільки наприкінці року. Штраф може дорівнювати 100-150% від вартості товару. Також існує ризик крадіжок і невиконання касової дисципліни.</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="252" viewBox="0 0 2 252" fill="none">
+                        <path opacity="0.5" d="M0.999878 1L0.999867 251" stroke="url(#paint0_linear_145_6025)" stroke-linecap="round"/>
+                        <defs>
+                          <linearGradient id="paint0_linear_145_6025" x1="0.999878" y1="251" x2="0.999876" y2="1" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#212121" stop-opacity="0"/>
+                            <stop offset="0.510417" stop-color="#212121"/>
+                            <stop offset="1" stop-color="#212121" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    <div class="block anim_up">
+                        <div class="img"><img src="/assets/images/problem2.svg" alt=""></div>
+                        <div>
+                            <h6>Використання номенклатури та класичного реєстратора розрахунків (РРО)</h6>
+                            <p>Для налаштування РРО та оновлення номенклатури регулярно потрібно вносити плату. Крім того, перелік товарів потребує постійних змін, що ускладнює бухгалтерський облік та збільшення збитків.</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Наше <span>рішення</span> дозволить вам:</h2>
+                <div class="solution">
+                    <div class="block anim_left"><div class="circle slide">01</div><p>Позбавитись необхідності встановлення касового апарата</p></div>
+                    <div class="block anim_right"><div class="circle slide">02</div><p>Уникнути потреби у використанні номенклатури</p></div>
+                    <div class="block anim_left"><div class="circle slide">03</div><p>Цілком усунути людський фактор при роботі з грошима</p></div>
+                    <div class="block anim_right"><div class="circle slide">04</div><p>Знизити ризики потенційних штрафів до нуля</p></div>
+                </div>
+                <div class="note anim_up slide">
+                    <div>
+                        <p>Переваги наданого рішення також включають прозорість і довіру з боку клієнта. Надання можливості оплати через термінал і використання електронних платіжних систем зміцнює довіру до вашої бізнес-моделі. Це сприяє покращенню взаємодії з клієнтами, а також створює довіру до наданих послуг та продуктів</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="perevag">
+        <div class="container">
+            <div class="four__inner">
+                <h2 class="anim_left"><span>Встановлення Електронного Касиру (ПТКС)</span> це вигідно, зручно та має ряд переваг</h2>
+                <div class="blocks">
+                    <div class="block anim_up">
+                        <div class="title blind slide">Вигоди для вашого бізнесу</div>
+                        <ul>
+                            <li>Легальне уникнення РРО
+                                та номенклатури товарів/послуг</li>
+                            <li>Видача фіскальних чеків,
+                                які визнаються податковою</li>
+                            <li>Автоматизація прийому оплати
+                                та зниження витрат на оплату праці</li>
+                            <li>Додатковий пасивний дохід завдяки
+                                отриманню комісії від поповнень на
+                                користь інших провайдерів та послуг</li>
+                            <li>Скорочення черг та прискорення
+                                обслуговування клієнта</li>
+                            <li>Прозорість та довіра з боку
+                                ваших клієнтів</li>
+                        </ul>
+                    </div>
+                    <div class="block anim_up">
+                        <div class="title blind slide">Зручність та функціонал</div>
+                        <ul>
+                            <li>Розширені можливості оплати: прийом
+                                готівки, карток та видача решти на картку</li>
+                            <li>Інтеграція з системою CRM
+                                для зручної звітності</li>
+                            <li>Суттєве зниження документообігу
+                                завдяки автоматизації процесу</li>
+                            <li>Віддалений контроль за платежами
+                                для ефективного моніторингу</li>
+                            <li>Можливість оплати додаткових
+                                5000+ сервісів для розширення
+                                функціональності</li>
+                            <li>Інтуїтивний та швидкий інтерфейс
+                                для комфортного користування </li>
+                        </ul>
+                    </div>
+                    <div class="block anim_up">
+                        <div class="title blind slide">Особливості та комфорт</div>
+                        <ul>
+                            <li>​​Зручний сервіс без людського фактора</li>
+                            <li>Безперервна робота 24/7
+                                без лікарняних, перерв, відпусток
+                                та перекурів</li>
+                            <li>Гарантована відсутність помилок
+                                під час роботи з системою</li>
+                            <li>Запобігання крадіжок та
+                                недобросовісної поведінки персоналу</li>
+                            <li>Комплексний супровід та гарантія
+                                надійності</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="forwho">
+        <div class="container">
+            <div class="forwho__inner">
+                <div class="block">
+                    <div>
+                        <h2 class="anim_left">Для кого електронний касир – це <span>ідеальне рішення</span>?</h2>
+                        <ul>
+                            <li class="anim_up">Коли ваш бізнес має <span>невеликий набір товарів або послуг</span> (до 10-20)</li>
+                            <li class="anim_up">Є <span>багато товарів і послуг</span> (понад 20), але немає потреби у швидкому обслуговуванні: медична сфера, ЦНАПи, СТО та автомийки, навчальні заклади, готельний бізнес, ветеринарні послуги, сфера краси, спортивні та розважальні центри тощо</li>
+                            <li class="anim_up">Продаж товарів здійснюється <span>за номером замовлення/накладної</span> (склади, склад-магазин, видача інтернет-замовлень)</li>
+                            <li class="anim_up">У вас є бажання <span>автоматизувати процес прийому грошей</span>, уникнути крадіжок та продажів поза касою</li>
+                        </ul>
+                    </div>
+                    <img class="forwho anim_right" src="/assets/images/forwho1.webp" alt="">
+                </div>
+                <div class="block">
+                    <img class="forwho anim_left" src="/assets/images/forwho2.webp" alt="">
+                    <div>
+                        <h2 class="anim_right">Для кого електронний касир буде ефективним <span>не на всі 100%</span></h2>
+                        <ul>
+                            <li class="anim_up">Є <span>багато малих товарів</span>, які касир пробиває окремо, <span>без використання номера замовлення/накладної</span> (наприклад, продуктовий магазин)</li>
+                            <li class="anim_up">Малий бізнес <span>з низькою маржинальністю та націнкою</span> на товари/послуги 1-3%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mob-img">
+                    <img class="anim_up" src="/assets/images/forwho3.png" alt="">
+                    <img class="anim_up" src="/assets/images/forwho4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="howdid__inner">
+                <h2 class="anim_left">Як це працює:</h2>
+                <div class="tape">
+                    <div class="block anim_up">
+                        <div class="circle slide">01</div>
+                        <img src="/assets/images/howdid1.png" alt="">
+                        <p>Продавець формує
+                            номер замовлення</p>
+                    </div>
+                    <img src="/assets/images/arrow.png" alt="">
+                    <div class="block anim_up">
+                        <div class="circle slide">02</div>
+                        <img src="/assets/images/howdid2.png" alt="">
+                        <p>Передає клієнту товарну
+                            накладну або озвучує
+                            номер замовлення</p>
+                    </div>
+                    <img src="/assets/images/arrow.png" alt="">
+                    <div class="block anim_up">
+                        <div class="circle slide">03</div>
+                        <img src="/assets/images/howdid3.png" alt="">
+                        <p>Клієнт вводить в терміналі
+                            отриманий номер</p>
+                    </div>
+                    <img src="/assets/images/arrow.png" alt="">
+                    <div class="block anim_up">
+                        <div class="circle slide">04</div>
+                        <img src="/assets/images/howdid4.png" alt="">
+                        <p>Оплачує його карткою
+                            або готівкою та отримує
+                            фіскальний чек</p>
+                    </div>
+                    <img src="/assets/images/arrow.png" alt="">
+                    <div class="block anim_up">
+                        <div class="circle slide">05</div>
+                        <img src="/assets/images/howdid5.png" alt="">
+                        <p>Показує чек
+                            продавцю та отримує
+                            свій товар</p>
+                    </div>
+                </div>
+                <div class="note anim_up slide">
+                    <div>
+                        <p>При необхідності, ми можемо приєднати термінал до вашої CRM системи. В такому випадку, чек буде не потрібен: після оплати клієнта, менеджер автоматично побачить оплачене замовлення у своєму комп'ютері/смартфоні.</p>
+                    </div>
+                </div>
+                <h2 class="anim_left"><span>Отримуйте</span> суму всіх оплат на ваш рахунок <span>вже на наступний день</span></h2>
+                <div class="pay">
+                    <div class="title"><div class="line"></div><span>Клієнти оплачують сьогодні</span><div class="line"></div></div>
+                    <div class="blocks">
+                        <div class="block"><div class="title blind slide">Швидко для бізнесу</div><p>Ви одразу зможете вивести кошти<br>з рахунку для потреб компанії</p></div>
+                        <div class="block"><div class="title blind slide">Зручно для бухгалтерії</div><p>Не потрібно вносити кожен платіж окремо,<br>коли приходить одна загальна сума</p></div>
+                    </div>
+                    <div class="title"><img src="/assets/images/arrow1.png" alt=""><span>Завтра всі кошти надходять на ваш рахунок одним платежем</span><img src="/assets/images/arrow2.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="worked">
+        <div class="container">
+            <div class="worked__inner">
+                <h2 class="anim_left">Чи можна взагалі працювати<br><span>без касового апарату?</span></h2>
+                <p class="anim_up">Застосування РРО та ПРРО стало обов'язковим для ФОП з 1 січня 2022 року, але під час воєнного стану скасовано штрафи за порушення використання РРО.
+                    <br>Після відміни пільг военного часу, яке обумовлено Меморандумом з Міжнародним валютним фондом, також відновляться і штрафні санкції
+                    <br><br>
+                    За порушення, або похибки при використанні РРО, або взагалі за відсутність РРО у ФОПа, діють наступні штрафи: у розмірі 100% вартості товарів, робіт чи послуг за перше порушення та 150% за кожне наступне порушення.
+                </p>
+                <h2 class="anim_left">Три легальні <span>способи уникнути РРO:</span></h2>
+                <div class="blocks">
+                    <div class="block anim_up">
+                        <div class="title blind slide">Варіант 1:<br>
+                            Проводити розрахунки
+                            через  установу банку
+                        </div>
+                        <div>
+                            <p>Переваги</p>
+                            <ul>
+                                <li>Підходить для суб'єктів господарювання,
+                                    включаючи ФОП та платників єдиного
+                                    податку.</li>
+                                <li>Операції не вважаються розрахунковими
+                                    згідно з роз'ясненнями податкової.</li>
+                                <li>Клієнти мають можливість здійснювати
+                                    оплату через банківську установу.</li>
+                            </ul>
+                            <p>Недоліки</p>
+                            <ul>
+                                <li>Незручно для клієнтів, які мають йти
+                                    до банку та стояти в чергах.</li>
+                                <li>Може зайняти багато часу та включати
+                                    витрати на комісії банку.</li>
+                                <li>Існує ризик помилок при введенні
+                                    реквізитів ФОПа.</li>
+                                <li>Може призвести до втрати клієнтів,
+                                    які більш віддають перевагу
+                                    готівковим розрахункам.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block anim_up">
+                        <div class="title blind slide">Варіант 2:<br>
+                            Отримувати платежі через
+                            Інтернет-банкінг
+                        </div>
+                        <div>
+                            <p>Переваги</p>
+                            <ul>
+                                <li>Уникнення використання РРО/ПРРО.</li>
+                                <li>Зручно для користувачів смартфонів
+                                    та додатків інтернет-банкінгу.</li>
+                            </ul>
+                            <p>Недоліки</p>
+                            <ul>
+                                <li>Незручно для клієнтів, які не
+                                    користуються онлайн-банкінгом.</li>
+                                <li>Вимагає освоєння процесу оплати
+                                    через додаток банку на смартфоні.</li>
+                                <li>Можуть бути комісії банку та додаткові
+                                    витрати для покупців.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block anim_up">
+                        <div class="title blind1 slide">Варіант 3:<br>
+                            Платіжний термінал
+                            фінустанови в вашому
+                            торговельному закладі
+                        </div>
+                        <div>
+                            <p>Переваги</p>
+                            <ul>
+                                <li>Покупець розраховується технічно
+                                    шляхом зарахування коштів
+                                    на ваш рахунок.</li>
+                                <li>Не потрібно організовувати відділення
+                                    банку чи фінустанови у магазині.</li>
+                                <li>Програмно-технічний комплекс самообслуговування від фінансової установи встановлюється в вашому заклад та завжди у вільному доступі для здійснення оплати вашими клієнтами</li>
+                            </ul>
+                            <p>Недоліки відсутні</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="eight__inner">
+                <p class="anim_left">Таким чином, ми бачимо, що електронний касир не тільки <span>дозволяє уникнути встановлення РРО</span> повністю в законному полі, але й <span>допомагає оптимізувати прийом платежів</span> і може виступати <span>джерелом Вашого пасивного доходу</span> шляхом отримання комісії від платежів на користь інших провайдерів послуг.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="mob">
+        <div class="container">
+            <div class="about__inner">
+                <div class="texts">
+                    <h2 class="anim_left"><span>Про нас</span></h2>
+                    <img class="anim_right" src="/assets/images/about1.png" alt="">
+                    <p class="anim_left">Компанія KioskPAY з 2007 року є успішним учасником ринку автоматизації прийому платежів. 16 років нашого досвіду – це не про цифри. Це про можливість надати клієнту індивідуальні рішення, сформувати ідеальну систему для комфортної роботи та мати можливість вирішити навіть надскладну ситуацію.</p>
+                    <img class="anim_right" src="/assets/images/about2.png" alt="">
+                    <p class="anim_left">Наша команда зацікавлена в створенні та удосконалення продукту, щоб кожен клієнт отримав вигідні умови співпраці, гнучку систему відсотків для невеликих підприємств, та розробку індивідуального інтерфейсу термінала для більш зручного використання.<br><br>Тому 16 років – це тільки початок. Ми не зупиняємося на досягнутому та с кожним роком стаємо кращими для вас.</p>
+                    <img class="anim_right" src="/assets/images/about3.png" alt="">
+                    <p class="anim_left">Ми пишаємось тим, що мережа наших клієнтів налічує 6500 платіжних терміналів по всій країні. Тільки за минулий квартал нашими партнерами стали понад 350 ФОПів по всій країні.Співпрацюємо з багатьма фінкомпаніями України, завдяки чому, через наші термінали реалізований прийом платежів на користь понад 5000+ провайдерів та послуг.<br><br>Надаємо своїм клієнтам повний спектр послуг на кожному етапі співпраці – підбір оптимального рішення, виробництво, запуск, навчання, а також технічний та бухгалтерський супровід, гарантійне та післягарантійне обслуговування нашої продукції.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="desktop">
+        <div class="container">
+            <div class="about__inner">
+                <div class="images">
+                    <img class="anim_left" src="/assets/images/about1.png" alt="">
+                    <img class="anim_left" src="/assets/images/about2.png" alt="">
+                    <img class="anim_left" src="/assets/images/about3.png" alt="">
+                </div>
+                <div class="texts">
+                    <h2 class="anim_right"><span>Про нас</span></h2>
+                    <p class="anim_right">Компанія KioskPAY з 2007 року є успішним учасником ринку автоматизації прийому платежів. 16 років нашого досвіду – це не про цифри. Це про можливість надати клієнту індивідуальні рішення, сформувати ідеальну систему для комфортної роботи та мати можливість вирішити навіть надскладну ситуацію.
+
+                        <br><br>Наша команда зацікавлена в створенні та удосконалення продукту, щоб кожен клієнт отримав вигідні умови співпраці, гнучку систему відсотків для невеликих підприємств, та розробку індивідуального інтерфейсу термінала для більш зручного використання. 
+                        
+                        <br><br>Тому 16 років – це тільки початок. Ми не зупиняємося на досягнутому та с кожним роком стаємо кращими для вас. 
+                        
+                        <br><br>Ми пишаємось тим, що мережа наших клієнтів налічує 6500 платіжних терміналів по всій країні. Тільки за минулий квартал нашими партнерами стали понад 350 ФОПів по всій країні.Співпрацюємо з багатьма фінкомпаніями України, завдяки чому, через наші термінали реалізований прийом платежів на користь понад 5000+ провайдерів та послуг.
+                        
+                        <br><br>Надаємо своїм клієнтам повний спектр послуг на кожному етапі співпраці – підбір оптимального рішення, виробництво, запуск, навчання, а також технічний та бухгалтерський супровід, гарантійне та післягарантійне обслуговування нашої продукції.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="algoritm__inner">
+                <h2 class="anim_left">Алгоритм роботи з нами:</h2>
+                <div class="tape">
+                    <div class="block anim_down">
+                        <div class="circle slide">01</div>
+                        <img src="/assets/images/algoritm1.png" alt="">
+                        <p>Зв'язок з нашими
+                            фахівцями та
+                            обговорення завдання</p>
+                    </div>
+                    <img src="/assets/images/arrow.png" alt="">
+                    <div class="block anim_down">
+                        <div class="circle slide">02</div>
+                        <img src="/assets/images/algoritm2.png" alt="">
+                        <p>Узгодження ТЗ
+                            та умов співпраці</p>
+                    </div>
+                    <img src="/assets/images/arrow.png" alt="">
+                    <div class="block anim_down">
+                        <div class="circle slide">03</div>
+                        <img src="/assets/images/algoritm3.png" alt="">
+                        <p>Укладання договору</p>
+                    </div>
+                    <img src="/assets/images/arrow.png" alt="">
+                    <div class="block anim_down">
+                        <div class="circle slide">04</div>
+                        <img src="/assets/images/algoritm4.png" alt="">
+                        <p>Виготовлення термінала
+                            та розробка ПЗ</p>
+                    </div>
+                    <img src="/assets/images/arrow.png" alt="">
+                    <div class="block anim_down">
+                        <div class="circle slide">05</div>
+                        <img src="/assets/images/algoritm5.png" alt="">
+                        <p>Доставка
+                            налагодженого
+                            обладнання</p>
+                    </div>
+                </div>
+                <p class="anim_up">Вам залишається лише <span>встановити</span> термінал у торговій точці, <span>під'єднати</span> мережу й інтернет та <span>розпочати</span> роботу</p>
+            </div>
+        </div>
+    </section>
+    <section id="terminals">
+        <div class="container">
+            <div class="terminals__inner">
+                <h3 class="anim_left"><span>Базові варіанти терміналів самообслуговування</span> з можливістю додаткового розширення функціонала, залежно від вимог замовника:</h3>
+                <div class="terminals">
+                    <div class="block anim_left">
+                        <div class="img"><img src="/assets/images/terminal1.png" alt=""></div>
+                        <p>Бюджет</p>
+                        <p>$890*</p>
+                        <button class="modal_send">Замовити</button>
+                    </div>
+                    <div class="block anim_up">
+                        <div class="img"><img src="/assets/images/terminal2.png" alt=""></div>
+                        <p>Стандарт</p>
+                        <p>$1130*</p>
+                        <button class="modal_send">Замовити</button>
+                    </div>
+                    <div class="block blind slide anim_right">
+                        <div class="img"><img src="/assets/images/terminal3.png" alt=""></div>
+                        <p>Преміум</p>
+                        <p>$1380*</p>
+                        <button class="modal_send">Замовити</button>
+                    </div>
+                </div>
+                <p class="anim_up">*До кожного терміналу можливе встановлення POS терміналу для прийому оплати за допомогою карток. Окремо купувати POS-термінал не потрібно, він видається на умовах оренди від банку.</p>
+                <p class="anim_up">** Є можливість замовити термінали в розстрочку від МоноБанку від 3 до 12 місяців, що дозволить суттєво скоротити розмір початкових інвестицій</p>
+                <h3 class="anim_left">Термінали можуть бути<br>виконані у таких <span>модифікаціях</span>:</h3>
+                <p class="anim_left">Кольори та додаткове обладнання обговорюються індивідуально</p>
+                <div class="color-terminals">
+                    <div class="block anim_up">
+                        <div class="img"><img src="/assets/images/terminal4.png" alt=""></div>
+                        <p>Навісні термінали</p>
+                        <button class="modal_send">Замовити</button>
+                    </div>
+                    <div class="block anim_up">
+                        <div class="img"><img src="/assets/images/terminal5.png" alt=""></div>
+                        <p>Вуличні термінали</p>
+                        <button class="modal_send">Замовити</button>
+                    </div>
+                    <div class="block anim_up">
+                        <div class="img"><img src="/assets/images/terminal6.png" alt=""></div>
+                        <p>Внутрішні термінали</p>
+                        <button class="modal_send">Замовити</button>
+                    </div>
+                    <div class="block anim_up">
+                        <div class="img"><img src="/assets/images/terminal7.png" alt=""></div>
+                        <p>Вбудовувані термінали</p>
+                        <button class="modal_send">Замовити</button>
+                    </div>
+                </div>
+                <h3 class="anim_left"><span>Прозора фіксована комісія</span><br>після кожної успішної транзакції</h3>
+                <p class="anim_left">І це перевага для вашого бізнесу:</p>
+                <div class="table anim_up">
+                    <div class="block">
+                        <div class="title slide">Затрати без електронного касира</div>
+                        <div>
+                            <p>Зарплата касиру</p>
+                            <p>Додаткова оплата бухгалтеру</p>
+                            <p>Можливі штрафи від податкової</p>
+                            <p>Оплата налаштування РРО<br>та оновлення номенклатури</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="block">
+                        <div class="title slide">Електронний касир</div>
+                        <div><span>2-4% комісії</span></div>
+                    </div>
+                </div>
+                <p class="anim_up">Комісія за послуги Фінкомпанії може стягуватися як з платника, так і з одержувача платежу. Крім того, комісія індивідуально налаштовується на різні види товарів та послуг</p>
+                <h3 class="anim_left">Акція <span>“Легкий старт”</span></h3>
+                <div class="star anim_up">
+                    <img src="/assets/images/star.png" alt="">
+                    <p>4,0%</p>
+                    <p>2,0%</p>
+                    <p>на перші три місяці роботи<br>
+                        при оформленні замовлення<br>
+                        до 01.08.2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="article__inner">
+                <h2 class="anim_left"><span>Стаття:</span> ЕЛЕКТРОННИЙ КАСИР.<br>
+                    ПЛЮСИ І ВИГОДИ, ДЛЯ ПІДПРИЄМСТВ І ФОПів
+                </h2>
+                <p class="anim_left">Цей розділ наводить обґрунтування вибору ПТКС як альтернативу касовим апаратам,
+                    а також містить відповіді на основні питання, які виникають у ФОПа під час пошуку варіанта роботи в нових умовах. Чітке розуміння переваг у співпраці з нашою компанією допоможе вам зробити усвідомлений вибір.
+                </p>
+                <img class="anim_up" src="/assets/images/doc.png" alt="">
+                <button class="blind anim_up slide">Читати статтю повністю</button>
+                <h4 class="anim_left">Більш детально про те, <span>як працює Електронний Касир</span>, Ви можете ознайомитись у нашому відео</h4>
+                <a href="#" class="video anim_up">
+                    <img src="/assets/images/video.png" alt="">
+                    <img src="/assets/images/pause.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="quest">
+        <div class="container">
+            <div class="quest__inner">
+                <div>
+                    <h2 class="anim_left">Часті запитання</h2>
+                    <div id="accordeon">
+                        <div>
+                            <div class="head anim_left">
+                                Чи працюєте ви за передоплатою?
+                                <div class="circle"><img src="/assets/images/plus.svg" alt=""></div>
+                            </div>
+                            <div class="acc-body">
+                                Так, ми працюємо за передоплатою. Ви можете внести передоплату в розмірі 10 000 гривень, а решту суми оплатити післяплатою
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="head anim_left">
+                                Чи надаєте ви гарантію?
+                                <div class="circle"><img src="/assets/images/plus.svg" alt=""></div>
+                            </div>
+                            <div class="acc-body">
+                                Так, у нас є гарантія на 12 місяців.
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="head anim_left">
+                                Де я можу отримати більше інформації?
+                                <div class="circle"><img src="/assets/images/plus.svg" alt=""></div>
+                            </div>
+                            <div class="acc-body">
+                                Ви можете залишити свою пошту та отримати лист з детальною інформацією або звернутися до нашого менеджера.
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="head anim_left">
+                                Через скільки часу я отримаю готовий термінал?
+                                <div class="circle"><img src="/assets/images/plus.svg" alt=""></div>
+                            </div>
+                            <div class="acc-body">
+                                Час, необхідний для розв'язання питання, зазвичай становить від 1,5 тижнів і залежить від складності вашої діяльності.
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="head anim_left">
+                                Як можна узгодити тарифи та договір?
+                                <div class="circle"><img src="/assets/images/plus.svg" alt=""></div>
+                            </div>
+                            <div class="acc-body">
+                                Для узгодження тарифів та умов договору ви можете звернутися до нас, і ми разом з вами знайдемо оптимальні умови співпраці.
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="head anim_left">
+                                Хто здійснює обслуговування мого термінала?
+                                <div class="circle"><img src="/assets/images/plus.svg" alt=""></div>
+                            </div>
+                            <div class="acc-body">
+                                За 16 років досвіду в термінальному напрямку, ми сформували ефективну модель супроводу клієнтів: <br>Якщо у вас є питання щодо роботи термінала → ви звертаєтеся до технічного відділу → наші фахівці повноцінно консультують вас та надають покроковий алгоритм розв'язання будь-якої проблеми, яка виникла в процесі роботи термінала → ви можете звернутись повторно при необхідності, у нас не існує “лімітів запитів”, тому ви отримаєте допомогу стільки разів, скільки вам потрібно.
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="head anim_left">
+                                Хто здійснює інкасацію мого термінала?
+                                <div class="circle"><img src="/assets/images/plus.svg" alt=""></div>
+                            </div>
+                            <div class="acc-body">
+                                Існує декілька варіантів:
+                                <ul>
+                                    <li>Безоплатний: клієнт самостійно проводить інкасацію та вносить гроші до банку-партнера</li>
+                                    <li>За комісію від банку: ваш термінал власноруч інкасує банк. Середня вартість – 150-300 грн за один виїзд.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form id="form1" class="anim_up">
+                    <div class="title">Є додаткові питання?</div>
+                    <div class="text">Залиште свої контакти, ми передзвонимо</div>
+                    <input type="text" name="name" id="name" required placeholder="Введіть Ваше ім’я">
+                    <input type="text" name="phone" id="phone" required placeholder="Введіть Ваш номер телефону">
+                    <button class="blind slide">Передзвоніть мені</button>
+                    <p>Натискаючи кнопку, ви даєте згоду на<br><a href="#">обробку своїх персональних даних</a>
+                    </p>
+                    <div>
+                        <p>або зв’яжіться<br>в мессенджерах</p>
+                        <a href="#"><img src="/assets/images/viber_blue.png" alt=""></a>
+                        <a href="#"><img src="/assets/images/telegram_blue.png" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section>
+            <div class="withus__inner">
+                <div class="container">
+                    <h2 class="anim_left">З нами <span>вже працюють</span>:</h2>
+                </div>
+                <div class="marquee">
+                    <div>
+                        <span>
+                            <a href="#"><img src="/assets/images/work1.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work2.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work3.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work4.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work5.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work6.png" alt=""></a>
+                        </span>
+                        <span>
+                            <a href="#"><img src="/assets/images/work1.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work2.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work3.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work4.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work5.png" alt=""></a>
+                            <a href="#"><img src="/assets/images/work6.png" alt=""></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="more">
+                    <div class="line anim_left"></div>
+                    <p class="anim_up">А також <span>більше 800 ФОПів</span> по всій країні</p>
+                    <div class="line anim_right"></div>
+                </div>
+            </div>
+    </section>
+    <section id="form">
+        <div class="container">
+            <div class="form__inner">
+                <div class="block">
+                    <img src="/assets/images/woomen.png" alt="">
+                    <img class="img" src="/assets/images/woomen1.png" alt="">
+                    <div>
+                        <h4 class="anim_left">Бажаєте <span>почати співпрацю</span> або у вас виникли <span>додаткові питання</span>?</h4>
+                        <div class="text anim_left">Залишайте заявку, щоб отримати лист з детальною інформацію на вашу електронну пошту та консультацію від фахівця.</div>
+                        <form id="form2">
+                            <input class="anim_up" type="text" name="name" id="name" required placeholder="Введіть Ваше ім’я">
+                            <input class="anim_up" type="text" name="phone" id="phone" required placeholder="Введіть Ваш номер">
+                            <input class="anim_up" type="email" name="email" id="email" required placeholder="Введіть Ваш e-mail">
+                            <input class="anim_up" type="text" name="text" id="text" placeholder="Введіть Ваш коментар">
+                            <button class="anim_up blind1 slide">Передзвоніть мені</button>
+                            <span></span>
+                            <div>
+                                <p class="anim_left">Натискаючи кнопку, ви даєте згоду на<br><a href="#">обробку своїх персональних даних</a></p>
+                                <div class="anim_left">
+                                    <p>або зв’яжіться<br>в мессенджерах</p>
+                                    <a href="#"><img src="/assets/images/viber_blue.png" alt=""></a>
+                                    <a href="#"><img src="/assets/images/telegram_blue.png" alt=""></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="contact__inner">
+                <div>
+                    <h2 class="anim_left">Контакти:</h2>
+                    <div class="anim_left"><img class="img" src="/assets/images/map.svg" alt=""><p>м. Дніпро, вул.Короленка, 1</p></div>
+                    <div class="anim_left"><img class="img" src="/assets/images/phone-blue.svg" alt=""><div><a class="tel" href="tel:+380980082788">+38(098)008-27-88</a><a class="tel" href="tel:+380502088885">+38(050)208-88-85</a></div></div>
+                    <div class="anim_left"><p>або зв’яжіться<br>в мессенджерах</p><a href="#"><img src="/assets/images/viber_blue.png" alt=""></a><a href="#"><img src="/assets/images/telegram_blue.png" alt=""></a></div>
+                </div>
+                <iframe class="anim_right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.571314215752!2d35.04127957635132!3d48.46475417128149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2e709431685%3A0xeaa347f591f9cbc6!2z0YPQuy4g0JrQvtGA0L7Qu9C10L3QutC-LCAxLCDQlNC90LXQv9GALCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDQ5MDAw!5e0!3m2!1sru!2sro!4v1688987902666!5m2!1sru!2sro" width="700" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer class="blind">
+        <div class="container">
+            <div class="footer__inner">
+                <img class="anim_up" src="/assets/images/logo1.svg" alt="">
+                <div class="column anim_up" style="text-align: left;">
+                    <p>Електронний касир</p>
+                    <a href="#" style="text-decoration: underline;">Політика конфіденційності</a>
+                </div>
+                <div class="row anim_up">
+                    <div class="column"><p>Зв’язатися з нами<br>через месенджери</p></div>
+                    <a href="#"><img src="/assets/images/viber.svg" alt=""></a>
+                    <a href="#"><img src="/assets/images/telegram.svg" alt=""></a>
+                </div>
+                <div class="row anim_up">
+                    <img src="/assets/images/phone.svg" alt="">
+                    <div class="column">
+                        <a class="phone" href="tel:+380980082788">+38(098)008-27-88</a>
+                        <a class="phone" href="tel:+380502088885">+38(050)208-88-85</a>
+                    </div>
+                </div>
+                <button class="anim_up modal_send">Замовити дзвінок</button>
+                <div class="column anim_up"><p>Розробка сайту<br><a href="#">CapJekaDesign</a></p></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
