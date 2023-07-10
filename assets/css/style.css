@@ -568,7 +568,7 @@ header nav .links button {
 /* Intro Block */
 #intro {
     overflow: hidden;
-    background-image: url('/assets/images/background.webp');
+    background-image: url('assets/images/background.webp');
     padding: 196px 0 113px;
     position: relative;
 }
@@ -701,7 +701,7 @@ header nav .links button {
     margin: 0;
 }
 .second__inner .block > div ul li {
-    list-style-image: url('/assets/images/marker.svg');
+    list-style-image: url('assets/images/marker.svg');
     color: #1B2238;
     font-size: var(--fs-15);
     font-style: normal;
@@ -839,7 +839,7 @@ header nav .links button {
     margin: 0;
 }
 .four__inner .blocks .block ul li {
-    list-style-image: url('/assets/images/marker.svg');
+    list-style-image: url('assets/images/marker.svg');
     color: #1B2238;
     font-size: var(--fs-15);
     font-style: normal;
@@ -885,7 +885,7 @@ header nav .links button {
 .forwho__inner .block > div ul li::before {
     position: absolute;
     content: " ";
-    background: url('/assets/images/marker1.svg');
+    background: url('assets/images/marker1.svg');
     height: 4px;
     width: 24px;
     left: -35px;
@@ -1075,13 +1075,13 @@ header nav .links button {
     margin-bottom: 20px;
 }
 .worked__inner .blocks .block > div:not(.title) ul:nth-child(2) li {
-    list-style-image: url('/assets/images/v.svg');
+    list-style-image: url('assets/images/v.svg');
 }
 .worked__inner .blocks .block > div:not(.title) ul:last-child li {
-    list-style-image: url('/assets/images/x.svg');
+    list-style-image: url('assets/images/x.svg');
 }
 .worked__inner .blocks .block:last-child > div:not(.title) ul:nth-child(2) li {
-    list-style-image: url('/assets/images/x-orange.svg');
+    list-style-image: url('assets/images/x-orange.svg');
 }
 
 /* Eight Block */
@@ -2465,7 +2465,7 @@ footer {
     }
     #intro {
         padding: 100px 0 5px;
-        background-image: url('/assets/images/background-mob.png');
+        background-image: url('assets/images/background-mob.png');
     }
     #intro .intro__inner {
         flex-direction: column;
