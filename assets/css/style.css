@@ -624,6 +624,11 @@ header nav .links button {
 #intro .intro__inner > div:last-child {
     position: relative;
     z-index: 1;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
 }
 #intro .intro__inner > div:last-child::after {
     content: '';
@@ -645,7 +650,6 @@ header nav .links button {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     opacity: 1;
-    visibility: visible;
     border: 10px solid #ffffff;
     filter: blur(15px);
     -webkit-filter: blur(15px);
@@ -656,13 +660,16 @@ header nav .links button {
     0% {
         width: 80%;
         height: 80%;
-        visibility: visible;
     }
-    100% {
+    70% {
         width: 150%;
         height: 150%;
+        opacity: .1;
+    }
+    100% {
+        width: 80%;
+        height: 80%;
         opacity: 0;
-        visibility: hidden;
     }
 }
 
@@ -869,10 +876,12 @@ header nav .links button {
     display: none;
 }
 .forwho__inner .block > div ul {
+    list-style-type: none;
     padding-inline-start: 30px;
     margin: 40px 0 0 0;
 }
 .forwho__inner .block > div ul li {
+    list-style-type: none;
     color: #1B2238;
     font-size: var(--fs-20);
     font-style: normal;
