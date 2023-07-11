@@ -2,6 +2,7 @@ var anim_up = document.querySelectorAll('.anim_up');
 var anim_down = document.querySelectorAll('.anim_down');
 var anim_left = document.querySelectorAll('.anim_left');
 var anim_right = document.querySelectorAll('.anim_right');
+var anim_boom = document.querySelectorAll('.anim_boom');
 
 document.getElementById('up').addEventListener('click', function(e) {
     e.preventDefault();
@@ -13,6 +14,7 @@ window.addEventListener('scroll', () => {
     showDown();
     showLeft();
     showRight();
+    showBoom();
 
     var scrollButton = document.getElementById('up');
     if (window.pageYOffset > 0) {
@@ -56,6 +58,16 @@ window.addEventListener('scroll', () => {
   
   function showRight() {
     anim_right.forEach(box => {
+        const boxPosition = box.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (boxPosition < windowHeight) {
+          box.classList.add('show');
+        }
+    });
+  }
+
+  function showBoom() {
+    anim_boom.forEach(box => {
         const boxPosition = box.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         if (boxPosition < windowHeight) {
@@ -139,7 +151,7 @@ $(document).ready(function() {
 
     $('#form2').submit(function(e) {
         e.preventDefault(); // Отмена отправки формы по умолчанию
-        location.href = '/thanks.html';
+        location.href = 'thanks.html';
 
         // var formData = $(this).serialize(); // Сериализация данных формы
 
@@ -159,12 +171,13 @@ $(document).ready(function() {
     });
 
     $('#to_main').on('click', () => {
-        location.href = '/index.html';
+        location.href = 'index.html';
     });
     showUp();
     showDown();
     showLeft();
     showRight();
+    showBoom();
 
     //Скролл до якорей
     $("[data-scroll]").on("click", function() {

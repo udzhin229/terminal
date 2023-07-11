@@ -26,6 +26,7 @@ button {
     border: none;
     cursor: pointer;
     outline: none;
+    font-weight: 500 !important;
 }
 section {
     overflow: hidden;
@@ -280,13 +281,17 @@ h6 {
     display: block;
     background: #ffffff;
     filter: blur(45px);
-    animation: slide-in 3s linear infinite;
-    -webkit-animation: slide-in 3s linear infinite;
+    animation: slide-in 10s linear 2s infinite;
+    -webkit-animation: slide-in 10s linear 2s infinite;
     -webkit-transform: rotate(30deg);
     -moz-transform: rotate(30deg);
     -ms-transform: rotate(30deg);
     -o-transform: rotate(30deg);
     -webkit-filter: blur(45px);
+}
+.slide1::after {
+    filter: blur(120px) !important;
+    -webkit-filter: blur(120px) !important;
 }
 @keyframes slide-in {
     0% {
@@ -296,12 +301,18 @@ h6 {
       -ms-transform: translate(0%, 0%) rotate(30deg);
       -o-transform: translate(0%, 0%) rotate(30deg);
 }
-    100% {
+    20% {
       transform: translate(1500%, 60%) rotate(30deg);
       -webkit-transform: translate(1500%, 60%) rotate(30deg);
       -moz-transform: translate(1500%, 60%) rotate(30deg);
       -ms-transform: translate(1500%, 60%) rotate(30deg);
       -o-transform: translate(1500%, 60%) rotate(30deg);
+}
+21% {
+    opacity: 0;
+}
+100% {
+    opacity: 0;
 }
 }
 /* Anim */
@@ -373,6 +384,27 @@ h6 {
     -moz-transform: translatex(0);
     -ms-transform: translatex(0);
     -o-transform: translatex(0);
+}
+.anim_boom {
+    opacity: 0;
+    transform: scale(.5);
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+.anim_boom.show {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
 }
 
 #menu {
@@ -1452,6 +1484,36 @@ header nav .links button {
 }
 .article__inner > img {
     align-self: center;
+    position: relative;
+    z-index: 1;
+}
+.article__inner > .document {
+    align-self: center;
+    position: relative;
+    z-index: 1;
+}
+.article__inner > .document::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background: #86B9FF;
+    filter: blur(270.5px);
+    -webkit-filter: blur(270.5px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .article__inner > button {
     align-self: center;
