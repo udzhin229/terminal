@@ -130,7 +130,7 @@ $(document).ready(function() {
 
     $('#form1').submit(function(e) {
         e.preventDefault(); // Отмена отправки формы по умолчанию
-        location.href = '/thanks.html';
+        location.href = 'thanks.html';
 
         // var formData = $(this).serialize(); // Сериализация данных формы
 
